@@ -1,0 +1,47 @@
+package MonHoc;
+
+import java.util.Date;
+
+public class MonHoc {
+	private String MaMH;
+	private String TenMonHoc;
+	private Date NgayMoLop;
+	private String HoTenGV;
+
+	public String getMaMH() {
+		return MaMH;
+	}
+	public void setMaMH(String maMH) {
+		MaMH = maMH;
+	}
+	public String getTenMonHoc() {
+		return TenMonHoc;
+	}
+	public void setTenMonHoc(String tenMonHoc) {
+		TenMonHoc = tenMonHoc;
+	}
+	public Date getNgayMoLop() {
+		return NgayMoLop;
+	}
+	public void setNgayMoLop(Date ngayMoLop) {
+		NgayMoLop = ngayMoLop;
+	}
+	public String getHoTenGV() {
+		return HoTenGV;
+	}
+	public void setHoTenGV(String hoTenGV) {
+		HoTenGV = hoTenGV;
+	}
+	public MonHoc() {
+	
+	}
+	public MonHoc(String maMH, String tenMH, Date ngayMoLop, String hoTenGV){
+		setMaMH(maMH);
+		setTenMonHoc(tenMH);
+		setNgayMoLop(ngayMoLop);
+		setHoTenGV(hoTenGV);
+	}
+	public String NhapHoc() {
+		return "Nhập học thành công!\n";
+	}
+}

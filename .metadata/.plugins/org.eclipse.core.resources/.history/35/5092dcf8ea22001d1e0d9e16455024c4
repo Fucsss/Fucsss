@@ -1,0 +1,94 @@
+package Bai2;
+
+import java.util.Scanner;
+
+public class SinhVien {
+	private int maSV;
+	private String tenSV;
+	private double LT;a
+	private double TH;
+	
+	public SinhVien() {
+		this.maSV = 11111;
+		this.tenSV = "Nguyen Van A";
+		this.LT = 0;
+		this.TH = 0;
+	}
+	public SinhVien(int maSV, String tenSV, double LT, double TH) {
+		this.setMaSV(maSV);
+		this.setTenSV(tenSV);
+		this.setLT(LT);
+		this.setTH(TH);
+	}
+	
+	public void setMaSV(int maSV) {
+		if(maSV > 0) {
+			this.maSV = maSV;	
+		}else {
+			Scanner sc = new Scanner(System.in);
+			do {
+				System.out.print("Ma sinh vien vua nhap khong hop le. Nhap lai: ");
+				this.maSV = sc.nextInt();
+			}while(this.maSV <= 0);
+		}
+	}
+	
+	public void setTenSV(String tenSV) {
+		if(tenSV != " ") {
+			this.tenSV = tenSV;
+		}else {
+			Scanner sc = new Scanner(System.in);
+			do {
+				System.out.print("Ten sinh vien vua nhap bi rong. Nhap lai: ");
+				this.tenSV = sc.nextLine();
+			}while(this.tenSV == "");
+		}
+	}
+	
+	
+	public void setLT(double lT) {
+		if(lT >= 0.0 && lT <= 10.0) {
+			this.LT = lT;
+		}else {
+			Scanner sc = new Scanner(System.in);
+			do {
+				System.out.print("Diem ly thuyet vua nhap khong hop le. Nhap lai: ");
+				this.LT = sc.nextDouble();
+			}while(!(LT >= 0 && LT <= 10));
+		}
+	}
+	
+	public void setTH(double TH) {
+		if(TH >= 0 && TH <= 10) {
+			this.TH = TH;
+		}else {
+			Scanner sc = new Scanner(System.in);
+			do {
+				System.out.print("Diem thuc hanh vua nhap khong hop le. Nhap lai: ");
+				this.TH = sc.nextDouble();
+			}while(!(TH >= 0 && TH <= 10));
+		}
+	}
+	
+	public int getMaSV() {
+		return maSV;
+	}
+	
+	public String getTenSV() {
+		return tenSV;
+	}
+	
+	public double getLT() {
+		return LT;
+	}
+	
+	public double getTH() {
+		return TH;
+	}
+	public double TB() {
+		return (LT + TH)/2;
+	}
+	public String toString() {
+		return String.format("%-10d %-30s %-10.2f %-10.2f %-10.2f", this.maSV, this.tenSV, this.LT, this.TH, TB());
+	}
+}

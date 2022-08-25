@@ -1,0 +1,9 @@
+package MonHoc;
+
+import java.sql.Date;
+
+public class MonHoc {
+	private String MaMH;
+	private String TenMonHoc;
+	private Date NgayMoLop;
+}

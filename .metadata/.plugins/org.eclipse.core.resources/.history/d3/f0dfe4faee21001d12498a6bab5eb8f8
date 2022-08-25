@@ -1,0 +1,23 @@
+package MonHoc;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Entry {
+
+	public static void tieude() {
+		for(int i = 1; i <=84; i++)
+			System.out.print('-');
+		System.out.println();
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Date dNow = new Date( );
+	      SimpleDateFormat ft = new SimpleDateFormat ("E dd/MM/yyyy 'at' hh:mm:ss a zzz");
+
+	      System.out.println("Current Date: " + ft.format(dNow));
+	}
+
+}
